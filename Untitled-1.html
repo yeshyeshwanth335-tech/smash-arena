@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smash Arena | Badminton Court</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#111827;
+}
+
+/* NAVBAR */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#07111f;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#22c55e;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#22c55e;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    padding:30px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#22c55e;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
+
+.primary{
+    background:#22c55e;
+    color:#07111f;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:80px 7%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:45px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.feature-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+/* PRICING */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.price-card.featured{
+    border:3px solid #22c55e;
+    transform:scale(1.03);
+}
+
+.price{
+    font-size:38px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.price span{
+    font-size:15px;
+    color:#6b7280;
+}
+
+.price-card ul{
+    list-style:none;
+    line-height:2.2;
+    margin-bottom:25px;
+}
+
+/* COACHING */
+
+.coaching{
+    background:#07111f;
+    color:white;
+}
+
+.coaching-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.coach-card{
+    background:#101c2d;
+    padding:30px;
+    border-radius:20px;
+}
+
+.coach-card h3{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+/* BOOKING */
+
+.booking{
+    background:white;
+}
+
+.booking-box{
+    max-width:700px;
+    margin:auto;
+    background:#f8fafc;
+    padding:35px;
+    border-radius:20px;
+}
+
+.booking-box input,
+.booking-box select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.booking-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#22c55e;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* REVIEWS */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.stars{
+    color:#f59e0b;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#22c55e;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin-bottom:25px;
+}
+
+.contact .btn{
+    background:#07111f;
+    color:white;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07111f;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* CHAT */
+
+.chat-button{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+    border:none;
+
+    background:#22c55e;
+    color:#07111f;
+
+    font-size:27px;
+    cursor:pointer;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.chat-box{
+    display:none;
+
+    position:fixed;
+    right:20px;
+    bottom:90px;
+
+    width:320px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+    overflow:hidden;
+
+    z-index:2000;
+}
+
+.chat-header{
+    background:#07111f;
+    color:white;
+    padding:18px;
+    font-weight:bold;
+}
+
+.chat-body{
+    padding:20px;
+}
+
+.chat-body p{
+    background:#f1f5f9;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.chat-body input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.chat-body button{
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    background:#22c55e;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .features,
+    .pricing,
+    .reviews,
+    .coaching-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .section{
+        padding:60px 5%;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="logo">
+🏸 <span>SMASH</span> ARENA
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#facilities">Facilities</a>
+
+<a href="#pricing">Pricing</a>
+
+<a href="#coaching">Coaching</a>
+
+<a href="#booking">Book Court</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Play Hard.<br>
+<span>Smash Harder.</span>
+</h1>
+
+<p>
+Premium badminton courts for players,
+families, students and professionals.
+Book your court and start playing today.
+</p>
+
+<a href="#booking" class="btn primary">
+Book Your Court
+</a>
+
+<a href="#pricing" class="btn secondary">
+View Pricing
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FACILITIES -->
+
+<section class="section" id="facilities">
+
+<h2 class="section-title">
+Why Choose Smash Arena?
+</h2>
+
+<p class="section-subtitle">
+Everything you need for a great badminton experience.
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🏸</div>
+
+<h3>Premium Courts</h3>
+
+<p>
+Professional badminton courts designed
+for comfortable and competitive play.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">💡</div>
+
+<h3>Bright Lighting</h3>
+
+<p>
+High-quality lighting so you can enjoy
+your game without distractions.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🚿</div>
+
+<h3>Clean Facilities</h3>
+
+<p>
+Clean changing rooms, drinking water
+and comfortable player facilities.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="section" id="pricing">
+
+<h2 class="section-title">
+Court Pricing
+</h2>
+
+<p class="section-subtitle">
+Simple and affordable plans for everyone.
+</p>
+
+<div class="pricing">
+
+
+<div class="price-card">
+
+<h3>Hourly</h3>
+
+<div class="price">
+₹250 <span>/ hour</span>
+</div>
+
+<ul>
+
+<li>✓ Court access</li>
+
+<li>✓ Lighting</li>
+
+<li>✓ Drinking water</li>
+
+</ul>
+
+<a href="#booking" class="btn primary">
+Book Now
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>Monthly</h3>
+
+<div class="price">
+₹2,499 <span>/ month</span>
+</div>
+
+<ul>
+
+<li>✓ Regular court access</li>
+
+<li>✓ Priority booking</li>
+
+<li>✓ Member benefits</li>
+
+</ul>
+
+<a href="#booking" class="btn primary">
+Join Now
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Coaching</h3>
+
+<div class="price">
+₹1,999 <span>/ month</span>
+</div>
+
+<ul>
+
+<li>✓ Professional coaching</li>
+
+<li>✓ Training sessions</li>
+
+<li>✓ Performance guidance</li>
+
+</ul>
+
+<a href="#coaching" class="btn primary">
+Learn More
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- COACHING -->
+
+<section class="section coaching" id="coaching">
+
+<h2 class="section-title">
+Badminton Coaching
+</h2>
+
+<p class="section-subtitle">
+Improve your skills with structured training.
+</p>
+
+<div class="coaching-grid">
+
+
+<div class="coach-card">
+
+<h3>Beginner Training</h3>
+
+<p>
+Learn badminton fundamentals, footwork,
+serving, strokes and basic match strategy.
+</p>
+
+</div>
+
+
+<div class="coach-card">
+
+<h3>Advanced Training</h3>
+
+<p>
+Improve your speed, power, footwork,
+smashes and competitive match skills.
+</p>
+
+</div>
+
+
+<div class="coach-card">
+
+<h3>Kids Coaching</h3>
+
+<p>
+Fun and structured badminton training
+designed especially for young players.
+</p>
+
+</div>
+
+
+<div class="coach-card">
+
+<h3>Fitness Training</h3>
+
+<p>
+Improve agility, stamina, coordination
+and overall badminton fitness.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="section booking" id="booking">
+
+<h2 class="section-title">
+Book Your Court
+</h2>
+
+<p class="section-subtitle">
+Choose your preferred date and time.
+</p>
+
+<div class="booking-box">
+
+<input
+type="text"
+placeholder="Your Name"
+id="name"
+>
+
+<input
+type="tel"
+placeholder="Phone Number"
+id="phone"
+>
+
+<input
+type="date"
+id="date"
+>
+
+<select id="time">
+
+<option>Select Time</option>
+
+<option>6:00 AM - 7:00 AM</option>
+
+<option>7:00 AM - 8:00 AM</option>
+
+<option>8:00 AM - 9:00 AM</option>
+
+<option>5:00 PM - 6:00 PM</option>
+
+<option>6:00 PM - 7:00 PM</option>
+
+<option>7:00 PM - 8:00 PM</option>
+
+<option>8:00 PM - 9:00 PM</option>
+
+</select>
+
+<button onclick="bookCourt()">
+🏸 Request Booking
+</button>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section">
+
+<h2 class="section-title">
+What Players Say
+</h2>
+
+<p class="section-subtitle">
+Our players love the Smash Arena experience.
+</p>
+
+<div class="reviews">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Great courts and very clean facilities.
+Perfect place for weekend games!"
+</p>
+
+<br>
+
+<strong>
+— Rahul
+</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The coaching sessions helped me improve
+my footwork and smash."
+</p>
+
+<br>
+
+<strong>
+— Ananya
+</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Affordable pricing and friendly staff.
+Highly recommended."
+</p>
+
+<br>
+
+<strong>
+— Kiran
+</strong>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<h2>
+Ready to Play?
+</h2>
+
+<p>
+Book your badminton court today.
+</p>
+
+<a
+href="https://wa.me/919999999999"
+target="_blank"
+class="btn"
+>
+📲 WhatsApp Us
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Smash Arena Badminton Court
+</p>
+
+<p style="margin-top:10px;">
+📍 Bangalore | 📞 +91 99999 99999
+</p>
+
+</footer>
+
+
+<!-- CHAT BUTTON -->
+
+<button
+class="chat-button"
+onclick="toggleChat()"
+>
+💬
+</button>
+
+
+<!-- CHAT BOX -->
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+
+🏸 Smash Arena Support
+
+</div>
+
+<div class="chat-body">
+
+<p>
+Hi! 👋 How can we help you?
+</p>
+
+<input
+type="text"
+id="chatMessage"
+placeholder="Type your question..."
+>
+
+<button onclick="sendMessage()">
+Send Message
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+
+/* BOOKING */
+
+function bookCourt(){
+
+let name =
+document.getElementById("name").value;
+
+let phone =
+document.getElementById("phone").value;
+
+let date =
+document.getElementById("date").value;
+
+let time =
+document.getElementById("time").value;
+
+
+if(name === "" || phone === "" || date === ""){
+
+alert("Please fill all the booking details.");
+
+return;
+
+}
+
+
+let message =
+"Hello Smash Arena!%0A%0A" +
+
+"I want to book a badminton court.%0A" +
+
+"Name: " + name + "%0A" +
+
+"Phone: " + phone + "%0A" +
+
+"Date: " + date + "%0A" +
+
+"Time: " + time;
+
+
+window.open(
+"https://wa.me/919999999999?text=" + message,
+"_blank"
+);
+
+}
+
+
+/* CHAT */
+
+function toggleChat(){
+
+let chat =
+document.getElementById("chatBox");
+
+if(chat.style.display === "block"){
+
+chat.style.display = "none";
+
+}else{
+
+chat.style.display = "block";
+
+}
+
+}
+
+
+/* CHAT MESSAGE */
+
+function sendMessage(){
+
+let message =
+document.getElementById("chatMessage").value;
+
+if(message === ""){
+
+alert("Please type your question.");
+
+return;
+
+}
+
+
+let whatsappMessage =
+"Hello Smash Arena!%0A%0A" +
+"Customer Question:%0A" +
+message;
+
+
+window.open(
+"https://wa.me/919999999999?text=" +
+whatsappMessage,
+"_blank"
+);
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
